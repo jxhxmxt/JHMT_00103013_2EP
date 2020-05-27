@@ -11,16 +11,29 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Vista/frmPrincipal.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Modelo/Appuser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Modelo/AppuserDAO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modelo/Conexion.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modelo/Address.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Controlador/Encriptador.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modelo/Product.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Vista/frmPrincipal.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modelo/AppOrder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Vista/frmPrincipal.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modelo/Business.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Vista/UserOrder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Vista/frmCambiarContra.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Vista/UserOrder.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Vista/frmCambiarContra.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Vista/AdminOrder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Vista/AdminOrder.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Form1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modelo/BusinessDAO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modelo/ProductDAO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modelo/AddressDAO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Vista/frmInicioSesion.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Vista/frmInicioSesion.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Modelo/Conexion.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Controlador/Encriptador.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Vista/frmPrincipal.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -33,9 +46,22 @@
         <option value="$PROJECT_DIR$/Modelo/AppuserDAO.cs" />
         <option value="$PROJECT_DIR$/Controlador/Encriptador.cs" />
         <option value="$PROJECT_DIR$/Vista/frmPrincipal.Designer.cs" />
-        <option value="$PROJECT_DIR$/Vista/frmPrincipal.cs" />
-        <option value="$PROJECT_DIR$/Vista/frmInicioSesion.cs" />
         <option value="$PROJECT_DIR$/Vista/frmInicioSesion.Designer.cs" />
+        <option value="$PROJECT_DIR$/Vista/frmCambiarContra.Designer.cs" />
+        <option value="$PROJECT_DIR$/Vista/frmInicioSesion.cs" />
+        <option value="$PROJECT_DIR$/Vista/frmCambiarContra.cs" />
+        <option value="$PROJECT_DIR$/Controlador/Business.cs" />
+        <option value="$PROJECT_DIR$/Modelo/Address.cs" />
+        <option value="$PROJECT_DIR$/Modelo/Business.cs" />
+        <option value="$PROJECT_DIR$/Modelo/Product.cs" />
+        <option value="$PROJECT_DIR$/Modelo/AppOrder.cs" />
+        <option value="$PROJECT_DIR$/Vista/UserOrder.Designer.cs" />
+        <option value="$PROJECT_DIR$/Vista/AdminOrder.Designer.cs" />
+        <option value="$PROJECT_DIR$/Modelo/BusinessDAO.cs" />
+        <option value="$PROJECT_DIR$/Vista/frmPrincipal.cs" />
+        <option value="$PROJECT_DIR$/Modelo/ProductDAO.cs" />
+        <option value="$PROJECT_DIR$/Modelo/AddressDAO.cs" />
+        <option value="$PROJECT_DIR$/Vista/UserOrder.cs" />
       </list>
     </option>
   </component>
@@ -82,27 +108,35 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1590621123369</updated>
-      <workItem from="1590621131365" duration="4074000" />
+      <workItem from="1590621131365" duration="4431000" />
+      <workItem from="1590604064686" duration="9669000" />
+      <workItem from="1590615336390" duration="367000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="842" y="399" key="Assembly removing confirmation dialog" timestamp="1590612245441">
+      <screen x="0" y="0" width="1920" height="910" />
+    </state>
+    <state x="842" y="399" key="Assembly removing confirmation dialog/0.0.1920.910@0.0.1920.910" timestamp="1590612245441" />
     <state x="1096" y="202" key="run.anything.popup" timestamp="1590624095851">
       <screen x="0" y="0" width="1920" height="910" />
     </state>

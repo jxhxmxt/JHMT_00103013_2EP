@@ -33,6 +33,9 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
+        <Reference Include="HugoApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>bin\Debug\HugoApp.exe</HintPath>
+        </Reference>
         <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
           <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.1.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
           <Private>True</Private>
@@ -95,11 +98,30 @@
         <Compile Include="Form1.Designer.cs">
             <DependentUpon>Form1.cs</DependentUpon>
         </Compile>
+        <Compile Include="Modelo\Address.cs" />
+        <Compile Include="Modelo\AddressDAO.cs" />
+        <Compile Include="Modelo\AppOrder.cs" />
         <Compile Include="Modelo\Appuser.cs" />
         <Compile Include="Modelo\AppuserDAO.cs" />
+        <Compile Include="Modelo\Business.cs" />
+        <Compile Include="Modelo\BusinessDAO.cs" />
         <Compile Include="Modelo\Conexion.cs" />
+        <Compile Include="Modelo\Product.cs" />
+        <Compile Include="Modelo\ProductDAO.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="Vista\AdminOrder.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="Vista\AdminOrder.Designer.cs">
+          <DependentUpon>AdminOrder.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Vista\frmCambiarContra.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Vista\frmCambiarContra.Designer.cs">
+          <DependentUpon>frmCambiarContra.cs</DependentUpon>
+        </Compile>
         <Compile Include="Vista\frmInicioSesion.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -112,6 +134,12 @@
         <Compile Include="Vista\frmPrincipal.Designer.cs">
           <DependentUpon>frmPrincipal.cs</DependentUpon>
         </Compile>
+        <Compile Include="Vista\UserOrder.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="Vista\UserOrder.Designer.cs">
+          <DependentUpon>UserOrder.cs</DependentUpon>
+        </Compile>
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>
             <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -121,8 +149,20 @@
             <AutoGen>True</AutoGen>
             <DependentUpon>Resources.resx</DependentUpon>
         </Compile>
+        <EmbeddedResource Include="Vista\AdminOrder.resx">
+          <DependentUpon>AdminOrder.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Vista\frmCambiarContra.resx">
+          <DependentUpon>frmCambiarContra.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="Vista\frmInicioSesion.resx">
           <DependentUpon>frmInicioSesion.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Vista\frmPrincipal.resx">
+          <DependentUpon>frmPrincipal.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Vista\UserOrder.resx">
+          <DependentUpon>UserOrder.cs</DependentUpon>
         </EmbeddedResource>
         <None Include="packages.config" />
         <None Include="Properties\Settings.settings">
@@ -139,7 +179,7 @@
         <None Include="App.config" />
     </ItemGroup>
     <ItemGroup>
-      <Folder Include="Resources" />
+      <Content Include="Resources\Hugo_APP1_01.jpg" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

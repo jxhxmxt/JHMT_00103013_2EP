@@ -11,6 +11,10 @@ namespace HugoApp.Vista
         {
             InitializeComponent();
         }
+        private void frmInicioSesion_Load(object sender, EventArgs e)
+        {
+            poblarControles();
+        }
         private void poblarControles()
         {
             // Actualizar ComboBox
@@ -45,7 +49,9 @@ namespace HugoApp.Vista
 
         private void btnCambiarContra_Click(object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            frmCambiarContra unaVentana = new frmCambiarContra();
+            unaVentana.ShowDialog();
+            poblarControles();
         }
     }
 }

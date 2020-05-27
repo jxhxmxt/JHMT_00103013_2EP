@@ -14,9 +14,16 @@
       <e p="HugoApp.csproj" t="IncludeRecursive" />
       <e p="HugoApp.sln" t="IncludeFlat" />
       <e p="Modelo" t="Include">
+        <e p="Address.cs" t="Include" />
+        <e p="AddressDAO.cs" t="Include" />
+        <e p="AppOrder.cs" t="Include" />
         <e p="Appuser.cs" t="Include" />
         <e p="AppuserDAO.cs" t="Include" />
+        <e p="Business.cs" t="Include" />
+        <e p="BusinessDAO.cs" t="Include" />
         <e p="Conexion.cs" t="Include" />
+        <e p="Product.cs" t="Include" />
+        <e p="ProductDAO.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
@@ -29,13 +36,25 @@
         <e p="Settings.Designer.cs" t="Include" />
         <e p="Settings.settings" t="Include" />
       </e>
-      <e p="Resources" t="Include" />
+      <e p="Resources" t="Include">
+        <e p="Hugo_APP1_01.jpg" t="Include" />
+      </e>
       <e p="Vista" t="Include">
+        <e p="AdminOrder.cs" t="Include" />
+        <e p="AdminOrder.Designer.cs" t="Include" />
+        <e p="AdminOrder.resx" t="Include" />
+        <e p="frmCambiarContra.cs" t="Include" />
+        <e p="frmCambiarContra.Designer.cs" t="Include" />
+        <e p="frmCambiarContra.resx" t="Include" />
         <e p="frmInicioSesion.cs" t="Include" />
         <e p="frmInicioSesion.Designer.cs" t="Include" />
         <e p="frmInicioSesion.resx" t="Include" />
         <e p="frmPrincipal.cs" t="Include" />
         <e p="frmPrincipal.Designer.cs" t="Include" />
+        <e p="frmPrincipal.resx" t="Include" />
+        <e p="UserOrder.cs" t="Include" />
+        <e p="UserOrder.Designer.cs" t="Include" />
+        <e p="UserOrder.resx" t="Include" />
       </e>
     </e>
   </component>

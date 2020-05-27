@@ -81,7 +81,7 @@ namespace HugoApp.Vista
             // 
             this.cmbUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbUsuario.FormattingEnabled = true;
-            this.cmbUsuario.Location = new System.Drawing.Point(152, 229);
+            this.cmbUsuario.Location = new System.Drawing.Point(152, 228);
             this.cmbUsuario.Name = "cmbUsuario";
             this.cmbUsuario.Size = new System.Drawing.Size(180, 23);
             this.cmbUsuario.TabIndex = 3;
@@ -93,13 +93,12 @@ namespace HugoApp.Vista
             this.txtContrasena.Size = new System.Drawing.Size(179, 23);
             this.txtContrasena.TabIndex = 4;
             this.txtContrasena.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtContrasena_KeyDown);
-
             // 
             // btnIniciarSesion
             // 
             this.btnIniciarSesion.Location = new System.Drawing.Point(51, 362);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
-            this.btnIniciarSesion.Size = new System.Drawing.Size(130, 42);
+            this.btnIniciarSesion.Size = new System.Drawing.Size(129, 42);
             this.btnIniciarSesion.TabIndex = 5;
             this.btnIniciarSesion.Text = "Iniciar sesion";
             this.btnIniciarSesion.UseVisualStyleBackColor = true;
@@ -109,7 +108,7 @@ namespace HugoApp.Vista
             // 
             this.btnCambiarContra.Location = new System.Drawing.Point(202, 362);
             this.btnCambiarContra.Name = "btnCambiarContra";
-            this.btnCambiarContra.Size = new System.Drawing.Size(130, 42);
+            this.btnCambiarContra.Size = new System.Drawing.Size(129, 42);
             this.btnCambiarContra.TabIndex = 6;
             this.btnCambiarContra.Text = "Cambiar contrasena";
             this.btnCambiarContra.UseVisualStyleBackColor = true;
@@ -132,6 +131,7 @@ namespace HugoApp.Vista
             this.Name = "frmInicioSesion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hugo App";
+            this.Load += new System.EventHandler(this.frmInicioSesion_Load);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
