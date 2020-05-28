@@ -1,0 +1,8 @@
+C:\Users\Administrator\Documents\workspaces\POO\JHMT_00103013_2EP\SourceCode\HugoApp\bin\Debug\HugoApp.exe.config
+C:\Users\Administrator\Documents\workspaces\POO\JHMT_00103013_2EP\SourceCode\HugoApp\bin\Debug\HugoApp.exe
+C:\Users\Administrator\Documents\workspaces\POO\JHMT_00103013_2EP\SourceCode\HugoApp\bin\Debug\HugoApp.pdb
+C:\Users\Administrator\Documents\workspaces\POO\JHMT_00103013_2EP\SourceCode\HugoApp\obj\Debug\HugoApp.csprojAssemblyReference.cache
+C:\Users\Administrator\Documents\workspaces\POO\JHMT_00103013_2EP\SourceCode\HugoApp\obj\Debug\HugoApp.Properties.Resources.resources
+C:\Users\Administrator\Documents\workspaces\POO\JHMT_00103013_2EP\SourceCode\HugoApp\obj\Debug\HugoApp.csproj.GenerateResource.cache
+C:\Users\Administrator\Documents\workspaces\POO\JHMT_00103013_2EP\SourceCode\HugoApp\obj\Debug\HugoApp.exe
+C:\Users\Administrator\Documents\workspaces\POO\JHMT_00103013_2EP\SourceCode\HugoApp\obj\Debug\HugoApp.pdb
