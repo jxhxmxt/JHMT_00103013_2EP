@@ -8,7 +8,7 @@
       <e p="bin" t="ExcludeRecursive" />
       <e p="Controlador" t="Include">
         <e p="BusinessxCantidad.cs" t="Include" />
-        <e p="Encriptador.cs" t="Include" />
+        <e p="FormatAppOrder.cs" t="Include" />
       </e>
       <e p="Form1.cs" t="Include" />
       <e p="Form1.Designer.cs" t="Include" />

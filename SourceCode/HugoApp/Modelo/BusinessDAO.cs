@@ -28,11 +28,21 @@ namespace HugoApp.Modelo
         }
         public static List<BusinessxCantidad> businxcantidad()
         {
-            string sql = "select \"b.name\" as negocio, sum(cp.cant) as \"total\" " +
+            /*string sql = "select \"b.name\" as negocio, sum(cp.cant) as \"total\" " +
                          "from business b, (select \"p.idBusiness\", \"p.name\", count(\"ap.idProduct\") " +
                          "AS \"cant\" from product p, apporder ap where \"p.idProduct\" = \"ap.idProduct\" " +
                          "group by \"p.idProduct\" order by \"p.name\" asc) as cp where \"b.idBusiness\" = " +
                          "\"cp.idBusiness\" group by \"b.idBusiness\"; ";
+                         */
+            string sql = "SELECT b.name AS \"Negocio\", sum(cp.cant) AS \"Total pedidos\" " +
+                "FROM BUSINESS b, " +
+                "(SELECT p.idBusiness, p.name, count(ap.idProduct) AS \"cant\" " +
+                "FROM PRODUCT p, APPORDER ap " +
+                "WHERE p.idProduct = ap.idProduct " +
+                "GROUP BY p.idProduct " +
+                "ORDER BY p.name ASC) AS cp " +
+                "WHERE b.idBusiness = cp.idBusiness " +
+                "GROUP BY b.idBusiness;";
 
             DataTable dt = Conexion.query(sql);
             
@@ -52,11 +62,19 @@ namespace HugoApp.Modelo
         public static void addBusiness(Business b)
         {
             string sql = String.Format(
-                "insert into business" + 
-                "(name, description)" +
+                "insert into business (name, description)" +
                 "values ('{0}', '{1}');",
                 b.Name, b.Description);
                 
+            Conexion.nonQuery(sql);
+        }
+        
+        public static void delete(int idBusiness)
+        {
+            string sql = String.Format(
+                "DELETE FROM BUSINESS WHERE idBusiness={0};",
+                idBusiness);
+            
             Conexion.nonQuery(sql);
         }
     }

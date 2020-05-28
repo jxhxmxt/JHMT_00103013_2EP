@@ -27,26 +27,34 @@ namespace HugoApp.Modelo
             return lista;
         }
         
-        public static List<Product> getLista(Appuser appuser)
+        public static List<Address> getLista(Appuser appuser)
         {
-            string sql = String.Format("select * from address " +
-                                       "where \"idUser\" = {0};",
+            string sql = String.Format("SELECT ad.idAddress, ad.address FROM ADDRESS ad WHERE idUser = {0};",
                 appuser.IdUser);
 
             DataTable dt = Conexion.query(sql);
             
-            List<Product> lista = new List<Product>();
+            List<Address> lista = new List<Address>();
             foreach (DataRow fila in dt.Rows)
             {
-                Product p = new Product();
-                p.IdProduct = Convert.ToInt32(fila[0].ToString());
-                p.IdBusiness = Convert.ToInt32(fila[1].ToString());
-                p.Name = fila[2].ToString();
+                Address a = new Address();
+                a.IdAddress = Convert.ToInt32(fila[0].ToString());
+                a.IdUser = appuser.IdUser;
+                a.Addr = fila[1].ToString();
                 
-                lista.Add(p);
+                lista.Add(a);
             }
 
             return lista;
+        }
+        public static void addAddress(int idUser,string addr)
+        {
+            string sql = String.Format(
+                "insert into address (idUser, address) " +
+                "values({0}, '{1}');",
+                idUser , addr);
+                
+            Conexion.nonQuery(sql);
         }
         public static void updateAddress(Address a,Appuser u, string addr)
         {
@@ -59,13 +67,11 @@ namespace HugoApp.Modelo
                 
             Conexion.nonQuery(sql);
         }
-        public static void removeAddress(Address a,Appuser u)
+        public static void removeAddress(Address a)
         {
             string sql = String.Format(
-                "delete from address " +
-                "WHERE \"idAddress\"={0} " +
-                "AND \"idUser\"={1};",
-                a.IdAddress , u.IdUser);
+                "DELETE FROM ADDRESS WHERE idAddress = {0};",
+                a.IdAddress);
                 
             Conexion.nonQuery(sql);
         }

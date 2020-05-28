@@ -41,7 +41,6 @@ namespace HugoApp.Vista
                 tabControl1.TabPages[1].Parent = null;
                 tabControl1.TabPages[1].Parent = null;
                 tabControl1.TabPages[1].Parent = null;
-                tabControl1.TabPages[1].Parent = null;
                 actualizarControlesUsuario();
             }
         }
@@ -66,7 +65,10 @@ namespace HugoApp.Vista
         {
             try
             {
-                AppOrderDAO.addOrder(DateTime.Now, cmbUsOrderProduct.SelectedIndex, cmbUsOrderAddr.SelectedIndex);
+                Address a = (Address) cmbUsOrderAddr.SelectedItem;
+                Product p = (Product) cmbUsOrderProduct.SelectedItem;
+                
+                AppOrderDAO.addOrder(DateTime.Now, p.IdProduct, a.IdAddress);
                 
                 MessageBox.Show("Pedido agregado exitosamente", "Hugo App",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -105,7 +107,14 @@ namespace HugoApp.Vista
             //tabla negocios
             dgvBusiness.DataSource = null;
             dgvBusiness.DataSource = BusinessDAO.getLista();
-            
+            //dgvProducts
+            dgvProducts.DataSource = null;
+            dgvProducts.DataSource = ProductDAO.getLista();
+            //cmbRemoveBusiness
+            cmbRemoveBusiness.DataSource = null;
+            cmbRemoveBusiness.ValueMember = "IdBusiness";
+            cmbRemoveBusiness.DisplayMember = "Name";
+            cmbRemoveBusiness.DataSource = BusinessDAO.getLista();
             //cmbAddProductBusiness
             cmbAddProductBusiness.DataSource = null;
             cmbAddProductBusiness.ValueMember = "IdBusiness";
@@ -113,11 +122,20 @@ namespace HugoApp.Vista
             cmbAddProductBusiness.DataSource = BusinessDAO.getLista();
             
             //cmbRmvProdc
-            Business b = (Business) cmbUsOrderBussines.SelectedItem;
+            Business b = (Business) cmbAddProductBusiness.SelectedItem;
             cmbRmvProdc.DataSource = null;
             cmbRmvProdc.ValueMember = "IdProduct";
             cmbRmvProdc.DisplayMember = "Name";
             cmbRmvProdc.DataSource = ProductDAO.getLista(b);
+            //cmbAlterAppuser
+            cmbAlterAppuser.DataSource = null;
+            cmbAlterAppuser.ValueMember = "IdUser";
+            cmbAlterAppuser.DisplayMember = "Username";
+            cmbAlterAppuser.DataSource = AppuserDAO.getLista();
+            //dgvAdminOrders
+            dgvAdminOrders.DataSource = null;
+            dgvAdminOrders.DataSource = AppuserDAO.getLista();
+            
             poblarGrafico();
         }
 
@@ -135,8 +153,8 @@ namespace HugoApp.Vista
             cmbUsOrderProduct.DataSource = ProductDAO.getLista();
             // cmbUsOrderAddr
             cmbUsOrderAddr.DataSource = null;
-            cmbUsOrderAddr.ValueMember = "IdUsuario";
-            cmbUsOrderAddr.DisplayMember = "Nombres";
+            cmbUsOrderAddr.ValueMember = "IdAddress";
+            cmbUsOrderAddr.DisplayMember = "Addr";
             cmbUsOrderAddr.DataSource = AddressDAO.getLista(user);
             //tabla
             dgvUserOrders.DataSource = null;
@@ -157,7 +175,7 @@ namespace HugoApp.Vista
         private void btnAddBusiness_Click(object sender, EventArgs e)
         {
             Business b = new Business();
-            b.Name = txtAddProducName.Text;
+            b.Name = txtAddBusiness.Text;
             b.Description = rtbAddBusinessDesc.Text;
             
             try
@@ -188,7 +206,7 @@ namespace HugoApp.Vista
 
         private void cmbAddProductBusiness_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Business b = (Business) cmbUsOrderBussines.SelectedItem;
+            Business b = (Business) cmbAddProductBusiness.SelectedItem;
             
             //cmbRmvProdc
             cmbRmvProdc.DataSource = null;
@@ -200,8 +218,9 @@ namespace HugoApp.Vista
         private void btnAddPrdSave_Click(object sender, EventArgs e)
         {
             Product p = new Product();
+            Business b = (Business) cmbAddProductBusiness.SelectedItem;
             p.Name = txtAddProducName.Text;
-            p.IdBusiness = Convert.ToInt32(cmbAddProductBusiness.ValueMember);
+            p.IdBusiness = b.IdBusiness;
             
             try
             {
@@ -227,7 +246,7 @@ namespace HugoApp.Vista
             if (MessageBox.Show("¿Seguro que desea eliminar el producto ?", 
                 "Hugo App", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                ProductDAO.rmProd(p);
+                ProductDAO.rmProd(p.IdProduct);
                 
                 MessageBox.Show("¡Producto eliminado exitosamente!", 
                     "Hugo App", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -236,6 +255,75 @@ namespace HugoApp.Vista
                 poblarGrafico();
                 actualizarControles();
             }
+        }
+        private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("¿Seguro que desea salir, " + user.Username + "?", 
+                "Hugo App", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                e.Cancel = false;
+            }
+        }
+
+        private void frmPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //Necesario porque el frmInicioSesion está escondido
+            Application.Exit();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Appuser u = (Appuser) cmbAlterAppuser.SelectedItem;
+            
+            if (MessageBox.Show("¿Seguro que desea eliminar al usuario ?", 
+                "Hugo App", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                AppuserDAO.delete(u.IdUser);
+                
+                MessageBox.Show("¡Usuario eliminado exitosamente!", 
+                    "Hugo App", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            actualizarControles();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Appuser u = new Appuser();
+
+            u.Fullname = txtAdminUserFull.Text;
+            u.Username = txtAdminUserName.Text;
+            u.Password = "password";
+            u.UserType = chbAdmin.Checked;
+            
+            if (MessageBox.Show("¿Seguro que desea agregar al usuario ?", 
+                "Hugo App", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                AppuserDAO.addAppuser(u);
+                
+                MessageBox.Show("¡Usuario agregado exitosamente; la contrasena es password!", 
+                    "Hugo App", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            actualizarControles();
+        }
+        
+
+        private void btnRemoveBusiness_Click(object sender, EventArgs e)
+        {
+            Business b = (Business) cmbRemoveBusiness.SelectedItem;
+            
+            if (MessageBox.Show("¿Seguro que desea eliminar el negocio ?", 
+                "Hugo App", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                BusinessDAO.delete(b.IdBusiness);
+                
+                MessageBox.Show("¡Negocio eliminado exitosamente!", 
+                    "Hugo App", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            actualizarControles();
         }
     }
 }

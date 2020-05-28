@@ -27,7 +27,7 @@ namespace HugoApp.Vista
 
         private void btnCambiarContra_Click(object sender, EventArgs e)
         {
-            bool actualIgual = Encriptador.CompararMD5(txtActual.Text, cmbUsuario.SelectedValue.ToString());
+            bool actualIgual = txtActual.Text.Equals(cmbUsuario.SelectedValue.ToString());
             bool nuevaIgual = txtNueva.Text.Equals(txtRepetir.Text);
             bool nuevaValida = txtNueva.Text.Length > 0;
             if (actualIgual && nuevaIgual && nuevaValida)

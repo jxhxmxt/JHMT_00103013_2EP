@@ -71,21 +71,11 @@ namespace HugoApp.Modelo
             
             Conexion.nonQuery(sql);
         }
-        public static void updateAppuserType(int idUser, bool userType)
-        {
-            string sql = String.Format(
-                "update appuser set userType={0} where \"idUser\" ='{1}';",
-                userType ? "true" : "false", idUser);
-            
-            Conexion.nonQuery(sql);
-        }
 
         public static void delete(int idUser)
         {
             string sql = String.Format(
-                "delete from registro where \"idusuario\" ='{0}'; " +
-                "delete from pedidos where \"idUsuario\" ='{0}'; " +
-                "delete from appuser where \"idUser\"='{0}';",
+                "DELETE FROM APPUSER WHERE idUser={0};",
                 idUser);
             
             Conexion.nonQuery(sql);

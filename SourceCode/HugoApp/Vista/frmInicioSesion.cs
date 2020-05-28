@@ -26,7 +26,7 @@ namespace HugoApp.Vista
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            if (Encriptador.CompararMD5(txtContrasena.Text, cmbUsuario.SelectedValue.ToString()))
+            if (txtContrasena.Text.Equals(cmbUsuario.SelectedValue.ToString()))
             {
                 Appuser u = (Appuser) cmbUsuario.SelectedItem;
                 
