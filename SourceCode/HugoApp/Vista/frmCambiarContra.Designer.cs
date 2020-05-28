@@ -48,9 +48,9 @@ namespace HugoApp.Vista
             // pictureBox1
             // 
             this.pictureBox1.Image = global::HugoApp.Properties.Resources.Hugo_APP1_01;
-            this.pictureBox1.Location = new System.Drawing.Point(25, 62);
+            this.pictureBox1.Location = new System.Drawing.Point(24, 62);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(144, 144);
+            this.pictureBox1.Size = new System.Drawing.Size(143, 144);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -107,35 +107,35 @@ namespace HugoApp.Vista
             // 
             this.cmbUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbUsuario.FormattingEnabled = true;
-            this.cmbUsuario.Location = new System.Drawing.Point(319, 34);
+            this.cmbUsuario.Location = new System.Drawing.Point(318, 33);
             this.cmbUsuario.Name = "cmbUsuario";
             this.cmbUsuario.Size = new System.Drawing.Size(152, 23);
             this.cmbUsuario.TabIndex = 5;
             // 
             // txtActual
             // 
-            this.txtActual.Location = new System.Drawing.Point(319, 72);
+            this.txtActual.Location = new System.Drawing.Point(318, 72);
             this.txtActual.Name = "txtActual";
             this.txtActual.Size = new System.Drawing.Size(152, 23);
             this.txtActual.TabIndex = 6;
             // 
             // txtNueva
             // 
-            this.txtNueva.Location = new System.Drawing.Point(319, 110);
+            this.txtNueva.Location = new System.Drawing.Point(318, 110);
             this.txtNueva.Name = "txtNueva";
             this.txtNueva.Size = new System.Drawing.Size(152, 23);
             this.txtNueva.TabIndex = 7;
             // 
             // txtRepetir
             // 
-            this.txtRepetir.Location = new System.Drawing.Point(319, 149);
+            this.txtRepetir.Location = new System.Drawing.Point(318, 149);
             this.txtRepetir.Name = "txtRepetir";
             this.txtRepetir.Size = new System.Drawing.Size(152, 23);
             this.txtRepetir.TabIndex = 8;
             // 
             // btnCambiarContra
             // 
-            this.btnCambiarContra.Location = new System.Drawing.Point(175, 206);
+            this.btnCambiarContra.Location = new System.Drawing.Point(175, 207);
             this.btnCambiarContra.Name = "btnCambiarContra";
             this.btnCambiarContra.Size = new System.Drawing.Size(125, 29);
             this.btnCambiarContra.TabIndex = 9;
@@ -145,7 +145,7 @@ namespace HugoApp.Vista
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(319, 206);
+            this.btnCancelar.Location = new System.Drawing.Point(318, 207);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(125, 29);
             this.btnCancelar.TabIndex = 10;

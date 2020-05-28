@@ -49,5 +49,24 @@ namespace HugoApp.Modelo
 
             return lista;
         }
+        public static void addProd(Product p)
+        {
+            string sql = String.Format(
+                "insert into product" + 
+                "where \"idProduct\" = {0};",
+                p.IdProduct);
+                
+            Conexion.nonQuery(sql);
+        }
+        public static void rmProd(Product p)
+        {
+            string sql = String.Format(
+                "delete from product" + 
+                "(\"idBusiness\", name)" +
+                "values ('{0}', {1});",
+                p.IdBusiness, p.Name);
+                
+            Conexion.nonQuery(sql);
+        }
     }
 }

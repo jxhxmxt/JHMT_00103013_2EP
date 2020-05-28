@@ -48,5 +48,26 @@ namespace HugoApp.Modelo
 
             return lista;
         }
+        public static void updateAddress(Address a,Appuser u, string addr)
+        {
+            string sql = String.Format(
+                "update address " +
+                "SET address={0} " +
+                "WHERE \"idAddress\"={1} " +
+                "AND \"idUser\"={2};",
+                addr , a.IdAddress , u.IdUser);
+                
+            Conexion.nonQuery(sql);
+        }
+        public static void removeAddress(Address a,Appuser u)
+        {
+            string sql = String.Format(
+                "delete from address " +
+                "WHERE \"idAddress\"={0} " +
+                "AND \"idUser\"={1};",
+                a.IdAddress , u.IdUser);
+                
+            Conexion.nonQuery(sql);
+        }
     }
 }

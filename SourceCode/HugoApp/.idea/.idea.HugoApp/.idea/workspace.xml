@@ -14,22 +14,26 @@
     <setting file="file://$PROJECT_DIR$/Modelo/Appuser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Modelo/AppuserDAO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Modelo/Conexion.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Modelo/Address.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Controlador/Encriptador.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Modelo/Product.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Vista/frmPrincipal.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Modelo/AppOrder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Vista/frmPrincipal.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Vista/frmCambiarContra.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Vista/frmCambiarContra.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Controlador/BusinessxCantidad.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modelo/AppOrderDAO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Vista/frmAddAddress.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Vista/frmAddAddress.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modelo/Address.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modelo/Product.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modelo/AppOrder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Modelo/Business.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Vista/UserOrder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Vista/frmCambiarContra.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Vista/UserOrder.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Vista/frmCambiarContra.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Vista/AdminOrder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Vista/AdminOrder.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Form1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Modelo/BusinessDAO.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Modelo/ProductDAO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Modelo/AddressDAO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Vista/frmInicioSesion.cs" root0="FORCE_HIGHLIGHTING" />
@@ -45,7 +49,6 @@
         <option value="$PROJECT_DIR$/Modelo/Conexion.cs" />
         <option value="$PROJECT_DIR$/Modelo/AppuserDAO.cs" />
         <option value="$PROJECT_DIR$/Controlador/Encriptador.cs" />
-        <option value="$PROJECT_DIR$/Vista/frmPrincipal.Designer.cs" />
         <option value="$PROJECT_DIR$/Vista/frmInicioSesion.Designer.cs" />
         <option value="$PROJECT_DIR$/Vista/frmCambiarContra.Designer.cs" />
         <option value="$PROJECT_DIR$/Vista/frmInicioSesion.cs" />
@@ -54,14 +57,20 @@
         <option value="$PROJECT_DIR$/Modelo/Address.cs" />
         <option value="$PROJECT_DIR$/Modelo/Business.cs" />
         <option value="$PROJECT_DIR$/Modelo/Product.cs" />
-        <option value="$PROJECT_DIR$/Modelo/AppOrder.cs" />
         <option value="$PROJECT_DIR$/Vista/UserOrder.Designer.cs" />
         <option value="$PROJECT_DIR$/Vista/AdminOrder.Designer.cs" />
+        <option value="$PROJECT_DIR$/Vista/UserOrder.cs" />
+        <option value="$APPLICATION_HOME_DIR$/tools/MSBuild/Current/Bin/Microsoft.Common.CurrentVersion.targets" />
+        <option value="$PROJECT_DIR$/Modelo/AppOrder.cs" />
+        <option value="$PROJECT_DIR$/Modelo/AddressDAO.cs" />
+        <option value="$PROJECT_DIR$/Vista/frmAddAddress.cs" />
+        <option value="$PROJECT_DIR$/Modelo/AppOrderDAO.cs" />
+        <option value="$PROJECT_DIR$/Modelo/ProductDAO.cs" />
+        <option value="$PROJECT_DIR$/Vista/frmPrincipal.Designer.cs" />
+        <option value="$PROJECT_DIR$/Controlador/BusinessxCantidad.cs" />
         <option value="$PROJECT_DIR$/Modelo/BusinessDAO.cs" />
         <option value="$PROJECT_DIR$/Vista/frmPrincipal.cs" />
-        <option value="$PROJECT_DIR$/Modelo/ProductDAO.cs" />
-        <option value="$PROJECT_DIR$/Modelo/AddressDAO.cs" />
-        <option value="$PROJECT_DIR$/Vista/UserOrder.cs" />
+        <option value="$PROJECT_DIR$/Vista/frmAddAddress.Designer.cs" />
       </list>
     </option>
   </component>
@@ -110,7 +119,7 @@
       <updated>1590621123369</updated>
       <workItem from="1590621131365" duration="4431000" />
       <workItem from="1590604064686" duration="9669000" />
-      <workItem from="1590615336390" duration="367000" />
+      <workItem from="1590615336390" duration="14357000" />
     </task>
     <servers />
   </component>
@@ -137,6 +146,22 @@
       <screen x="0" y="0" width="1920" height="910" />
     </state>
     <state x="842" y="399" key="Assembly removing confirmation dialog/0.0.1920.910@0.0.1920.910" timestamp="1590612245441" />
+    <state width="1876" height="234" key="GridCell.Tab.0.bottom" timestamp="1590615968420">
+      <screen x="0" y="0" width="1920" height="910" />
+    </state>
+    <state width="1876" height="234" key="GridCell.Tab.0.bottom/0.0.1920.910@0.0.1920.910" timestamp="1590615968420" />
+    <state width="1876" height="234" key="GridCell.Tab.0.center" timestamp="1590615968420">
+      <screen x="0" y="0" width="1920" height="910" />
+    </state>
+    <state width="1876" height="234" key="GridCell.Tab.0.center/0.0.1920.910@0.0.1920.910" timestamp="1590615968420" />
+    <state width="1876" height="234" key="GridCell.Tab.0.left" timestamp="1590615968419">
+      <screen x="0" y="0" width="1920" height="910" />
+    </state>
+    <state width="1876" height="234" key="GridCell.Tab.0.left/0.0.1920.910@0.0.1920.910" timestamp="1590615968419" />
+    <state width="1876" height="234" key="GridCell.Tab.0.right" timestamp="1590615968420">
+      <screen x="0" y="0" width="1920" height="910" />
+    </state>
+    <state width="1876" height="234" key="GridCell.Tab.0.right/0.0.1920.910@0.0.1920.910" timestamp="1590615968420" />
     <state x="1096" y="202" key="run.anything.popup" timestamp="1590624095851">
       <screen x="0" y="0" width="1920" height="910" />
     </state>
